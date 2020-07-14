@@ -1,18 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/login.vue'
-import Home from '../components/Home.vue'
-import Welcome from '../components/Welcome.vue'
-import Users from '../components/user/Users.vue'
+
+
+// import Login from '../components/login.vue'
+// import Home from '../components/Home.vue'
+// import Welcome from '../components/Welcome.vue'
+// import Users from '../components/user/Users.vue'
+// import Rights from '../components/power/rights.vue'
+// import Roles from '../components/power/Roles.vue'
 
 Vue.use(VueRouter)
 
-
+//解决连续点击同一个路由报错问题
 const originalPush = VueRouter.prototype.push
    VueRouter.prototype.push = function push(location) {
    return originalPush.call(this, location).catch(err => err)
 }
-	
+
+//换成路由懒加载模式
+const Login =() => import('../components/login.vue')
+const Home =() => import('../components/Home.vue')
+const Welcome =() => import('../components/Welcome.vue')
+const Users =() => import('../components/user/Users.vue')
+const Rights =() =>import('../components/power/rights.vue')
+const Roles =() => import('../components/power/Roles.vue')	
 	
   const routes = [
 	  {
@@ -35,6 +46,14 @@ const originalPush = VueRouter.prototype.push
 			{
 			  path:'/users',
 			  component:Users
+			},
+			{
+			  path:'/rights',
+			  component:Rights
+			},
+			{
+			  path:'/roles',
+			  component:Roles
 			}
 			]
 	  }

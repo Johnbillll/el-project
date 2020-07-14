@@ -102,6 +102,12 @@
 							  { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }]
 				}
 			}
+		},
+		created(){
+			//console.log('Login created')
+		},
+		destroyed(){
+			//console.log('Login destroyed')
 		}
 	}
 </script>
