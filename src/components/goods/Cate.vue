@@ -172,7 +172,7 @@
 			},
 
 			//监听对话框的关闭事件，重置内容
-			
+			//改一下试试
 			addCateDialogClosed(){
 				this.$refs.addCartFormRef.resetFields()
 				this.selectedKeys = []
