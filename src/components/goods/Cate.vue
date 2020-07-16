@@ -172,6 +172,7 @@
 			},
 
 			//监听对话框的关闭事件，重置内容
+			//冲冲冲
 			addCateDialogClosed(){
 				this.$refs.addCartFormRef.resetFields()
 				this.selectedKeys = []
