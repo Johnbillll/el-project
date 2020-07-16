@@ -24,6 +24,7 @@ const Welcome =() => import('../components/Welcome.vue')
 const Users =() => import('../components/user/Users.vue')
 const Rights =() =>import('../components/power/rights.vue')
 const Roles =() => import('../components/power/Roles.vue')	
+const Cate =() => import('../components/goods/Cate.vue')
 	
   const routes = [
 	  {
@@ -54,6 +55,10 @@ const Roles =() => import('../components/power/Roles.vue')
 			{
 			  path:'/roles',
 			  component:Roles
+			},
+			{
+				path:'/categories',
+				component:Cate
 			}
 			]
 	  }
