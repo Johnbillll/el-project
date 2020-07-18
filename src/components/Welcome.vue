@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-	欢迎来到！！
+	欢迎来到某后台管理系统！！！
   </div>
 </template>
 
